@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 
     <!-- Firebase Reference -->
-  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
   </head>
 
@@ -42,70 +42,73 @@
         <!-- Table -->
         <div class="container-fluid">
           <table class="table" id="train-table">
-            <tr>
-              <td><strong>Train Name</strong></td>
-              <td><strong>Destination</strong></td>
-              <td><strong>Frequency (mm)</strong></td>
-              <td><strong>Next Arrival</strong></td>
-              <td><strong>Minutes Away</strong></td>
-            </tr>
-            <!-- Trenton Express -->
-            <tr>
-              <td>Trenton Express</td>
-              <td>Trenton</td>
-              <td>25</td>
-              <td id="trenton-next">17:35</td>
-              <td id="trenton-mins-away">10</td>
-            </tr>
-            <!--Oregon Trail -->
-            <tr>
-              <td>Oregon Trail</td>
-              <td>Salem, Oregon</td>
-              <td>3600</td>
-              <td id="salem-next">13:39</td>
-              <td id="salem-mins-away">1154</td>
-            </tr>
-            <!-- Midnight Carriage -->
-            <tr>
-              <td>Midnight Carriage</td>
-              <td>Philadelphia</td>
-              <td>15</td>
-              <td id="phil-next">17:35</td>
-              <td id="phil-mins-away">10</td>
-            </tr>
-            <!-- Sing Sing Caravan -->
-            <tr>
-              <td>Sing Sing Caravan</td>
-              <td>Atlanta</td>
-              <td>45</td>
-              <td id="atlanta-next">17:53</td>
-              <td id="atlanta-mins-away">28</td>
-            </tr>
-            <!-- Boston Bus -->
-            <tr>
-              <td>Boston Bus</td>
-              <td>Boston</td>
-              <td>65</td>
-              <td id="boston-next">17:50</td>
-              <td id="boston-mins-away">25</td>
-            </tr>
-            <!-- California Caravan -->
-            <tr>
-              <td>California Caravan</td>
-              <td>San Francisco</td>
-              <td>6000</td>
-              <td id="sanfran-next">1:25</td>
-              <td id="sanfran-mins-away">4740</td>
-            </tr>
-            <!-- Analben's Train -->
-            <tr>
-              <td>Analben's Train</td>
-              <td>Orlando</td>
-              <td>25</td>
-              <td id="orlando-next">17:28</td>
-              <td id="orlando-mins-away">3</td>
-            </tr>                                    
-       
+            <tbody>
+            <thead>
+              <tr>
+                <th><strong>Train Name</strong></th>
+                <th><strong>Destination</strong></th>
+                <th><strong>Frequency (mm)</strong></th>
+                <th><strong>Next Arrival</strong></th>
+                <th><strong>Minutes Away</strong></th>
+              </tr>
+            </thead>
+              <!-- Trenton Express -->
+              <tr>
+                <td>Trenton Express</td>
+                <td>Trenton</td>
+                <td>25</td>
+                <td id="trenton-next">17:35</td>
+                <td id="trenton-mins-away">10</td>
+              </tr>
+              <!--Oregon Trail -->
+              <tr>
+                <td>Oregon Trail</td>
+                <td>Salem, Oregon</td>
+                <td>3600</td>
+                <td id="salem-next">13:39</td>
+                <td id="salem-mins-away">1154</td>
+              </tr>
+              <!-- Midnight Carriage -->
+              <tr>
+                <td>Midnight Carriage</td>
+                <td>Philadelphia</td>
+                <td>15</td>
+                <td id="phil-next">17:35</td>
+                <td id="phil-mins-away">10</td>
+              </tr>
+              <!-- Sing Sing Caravan -->
+              <tr>
+                <td>Sing Sing Caravan</td>
+                <td>Atlanta</td>
+                <td>45</td>
+                <td id="atlanta-next">17:53</td>
+                <td id="atlanta-mins-away">28</td>
+              </tr>
+              <!-- Boston Bus -->
+              <tr>
+                <td>Boston Bus</td>
+                <td>Boston</td>
+                <td>65</td>
+                <td id="boston-next">17:50</td>
+                <td id="boston-mins-away">25</td>
+              </tr>
+              <!-- California Caravan -->
+              <tr>
+                <td>California Caravan</td>
+                <td>San Francisco</td>
+                <td>6000</td>
+                <td id="sanfran-next">1:25</td>
+                <td id="sanfran-mins-away">4740</td>
+              </tr>
+              <!-- Analben's Train -->
+              <tr>
+                <td>Analben's Train</td>
+                <td>Orlando</td>
+                <td>25</td>
+                <td id="orlando-next">17:28</td>
+                <td id="orlando-mins-away">3</td>
+              </tr>                                    
+            </tbody>
          </table>
         </div>
 
