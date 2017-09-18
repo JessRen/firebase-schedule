@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 
     <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
 
   </head>
 
@@ -42,7 +42,6 @@
         <!-- Table -->
         <div class="container-fluid">
           <table class="table" id="train-table">
-            <tbody>
             <thead>
               <tr>
                 <th><strong>Train Name</strong></th>
@@ -52,7 +51,11 @@
                 <th><strong>Minutes Away</strong></th>
               </tr>
             </thead>
-              <!-- Trenton Express -->
+            <tbody>
+              
+              <!-- Entering this data thru admin panel. Come back to this in order to adjust static page data to update 2 relevant time fields using momentjs calculations. 
+
+              Trenton Express 
               <tr>
                 <td>Trenton Express</td>
                 <td>Trenton</td>
@@ -60,7 +63,7 @@
                 <td id="trenton-next">17:35</td>
                 <td id="trenton-mins-away">10</td>
               </tr>
-              <!--Oregon Trail -->
+              Oregon Trail 
               <tr>
                 <td>Oregon Trail</td>
                 <td>Salem, Oregon</td>
@@ -68,7 +71,7 @@
                 <td id="salem-next">13:39</td>
                 <td id="salem-mins-away">1154</td>
               </tr>
-              <!-- Midnight Carriage -->
+              Midnight Carriage
               <tr>
                 <td>Midnight Carriage</td>
                 <td>Philadelphia</td>
@@ -76,7 +79,7 @@
                 <td id="phil-next">17:35</td>
                 <td id="phil-mins-away">10</td>
               </tr>
-              <!-- Sing Sing Caravan -->
+              Sing Sing Caravan
               <tr>
                 <td>Sing Sing Caravan</td>
                 <td>Atlanta</td>
@@ -84,7 +87,7 @@
                 <td id="atlanta-next">17:53</td>
                 <td id="atlanta-mins-away">28</td>
               </tr>
-              <!-- Boston Bus -->
+              Boston Bus
               <tr>
                 <td>Boston Bus</td>
                 <td>Boston</td>
@@ -92,7 +95,7 @@
                 <td id="boston-next">17:50</td>
                 <td id="boston-mins-away">25</td>
               </tr>
-              <!-- California Caravan -->
+              California Caravan
               <tr>
                 <td>California Caravan</td>
                 <td>San Francisco</td>
@@ -100,21 +103,22 @@
                 <td id="sanfran-next">1:25</td>
                 <td id="sanfran-mins-away">4740</td>
               </tr>
-              <!-- Analben's Train -->
+              Analben's Train
               <tr>
                 <td>Analben's Train</td>
                 <td>Orlando</td>
                 <td>25</td>
                 <td id="orlando-next">17:28</td>
                 <td id="orlando-mins-away">3</td>
-              </tr>                                    
+              </tr>     
+              Ending comment -->                               
             </tbody>
          </table>
         </div>
 
       </div> <!--Panel closure -->
 
-      <!--generate table content updates drawing upon the API for real-time next train updates--> 
+      <!--generate table CONTENT drawing upon the API for real-time next train updates--> 
 
       <!-- Admin Panel with Form of 4 Input Fields for Adding Train  -->
       <div class="panel panel-default">
