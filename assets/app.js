@@ -17,7 +17,7 @@ var database = firebase.database();
 
 // I first hard-coded the existing schedule, in the html table, with IDs for fields that need ongoing updates: Next Arrival and Minutes Away 
 
-/* I since commented out the hardcodes for a prelim 'static' assumed page. Return to this so I can convert static page input to realtime updated via momentjs, drawing upon the info already there. 
+/* I since commented out the hard-code of a prelim 'static' assumed page. Return to this so I can convert static page input to realtime updated via momentjs, drawing upon the info already there. 
 
   "#trenton-next" 
   "#trenton-mins-away"
@@ -54,7 +54,7 @@ $("#add-train").on("click", function(event) {
   var freqAdd = $("#add-train-freq").val().trim();
 
 
-  // Inputs now properties in the newTrain object
+  // Inputs new properties in the newTrain object
   var newTrain = {
     name: trainAdd,
     place: placeAdd,
@@ -101,13 +101,11 @@ $("#add-train").on("click", function(event) {
     console.log(timeAdd);
     console.log(freqAdd);
 
-    // Cleaning Up Added Train's First Arrival Time - applying momentjs to timeAdd
-    var timeAddMoment = moment(timeAdd, "hh:mm");
-
+    /// Cleaning Up Added Train's First Arrival Time - applying momentjs to timeAdd
+    var timeAddMoment = moment(timeAdd, "hh:mm").subtract(1, "years");
+    console.log(timeAddMoment);
     // Current time into a variable
-    var currentTime = moment().format("Hh:mm");
-
-
+    var currentTime = moment().format("hh:mm A");
     console.log("Current Time: " + currentTime);
 
 
@@ -122,10 +120,10 @@ $("#add-train").on("click", function(event) {
       console.log("Minutes Until Next Train: " + timeUntil);
 
     var trainNext = moment().add(timeUntil, "minutes");
-      console.log("Arrival Time: " + moment(trainNext).format("hh:mm"));
+      console.log("Arrival Time: " + moment(trainNext).format("hh:mm A"));
 
     //Cleaning up Added Train's Next Arrival Time - applying momentjs to trainNext
-    var trainNextClean = moment(trainNext).format("HH:mm");
+    var trainNextClean = moment(trainNext).format("hh:mm A");
 
 
     // ****** Handled the time calculations and moment conversions ******
@@ -135,8 +133,7 @@ $("#add-train").on("click", function(event) {
    // Setting our clock for all the time updates
    
    function displayTime() {
-      var time = moment().format("HH:mm:ss");
-      setTimeout(displayTime, 1000);
+      var time = moment().format("hh:mm:ss A");
       $("#clock").html(time);
    } 
 
